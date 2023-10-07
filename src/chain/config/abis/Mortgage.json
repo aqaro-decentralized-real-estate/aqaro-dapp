@@ -1,0 +1,234 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Mortgage",
+  "sourceName": "contracts/mortgage/Mortgage.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_propertyContract",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_buyer",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "int256",
+              "name": "incomeMonthly",
+              "type": "int256"
+            },
+            {
+              "internalType": "int256",
+              "name": "incomeYearly",
+              "type": "int256"
+            },
+            {
+              "internalType": "bool",
+              "name": "KYCVerified",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct MortgageRequester",
+          "name": "requester",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "int256",
+              "name": "amountUSD",
+              "type": "int256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountETH",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalPayments",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "endDate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "int16",
+              "name": "interestRate",
+              "type": "int16"
+            }
+          ],
+          "internalType": "struct MortgagePayment",
+          "name": "mortgagePayment",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "MortgageDurationInPast",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "buyer",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "endDate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "mortgageAmount",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "mortgageAmountEth",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "payWindow",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "paymentInterval",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "property",
+      "outputs": [
+        {
+          "internalType": "contract Property",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "propertyContract",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "startDate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "status",
+      "outputs": [
+        {
+          "internalType": "enum MortgageStatus",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalPayments",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60806040526212750060095562278d00600a5534801561001e57600080fd5b5060405161073d38038061073d83398101604081905261003d91610269565b6001600055606081015142111561006757604051639a0d215560e01b815260040160405180910390fd5b606081015160085560018054600280546001600160a01b0319166001600160a01b0388169081179091556001600160a81b031990911617905581518290600b9081906100b39082610422565b50602082810151600183015560408084015160028401556060938401516003938401805460ff19169115159190911790558451600f819055918501516010819055908501516011819055938501516012556080909401516013805461ffff191661ffff90921691909117905560165560179290925581546001600160a01b0319166001600160a01b039490941693909317905550600655506104e1565b80516001600160a01b038116811461016757600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b604051608081016001600160401b03811182821017156101a4576101a461016c565b60405290565b604051601f8201601f191681016001600160401b03811182821017156101d2576101d261016c565b604052919050565b8051801515811461016757600080fd5b600060a082840312156101fc57600080fd5b60405160a081016001600160401b038111828210171561021e5761021e61016c565b80604052508091508251815260208301516020820152604083015160408201526060830151606082015260808301518060010b811461025c57600080fd5b6080919091015292915050565b600080600080610100858703121561028057600080fd5b61028985610150565b93506020610298818701610150565b60408701519094506001600160401b03808211156102b557600080fd5b908701906080828a0312156102c957600080fd5b6102d1610182565b8251828111156102e057600080fd5b8301601f81018b136102f157600080fd5b8051838111156103035761030361016c565b610315601f8201601f191687016101aa565b93508084528b8682840101111561032b57600080fd5b60005b8181101561034957828101870151858201880152860161032e565b5060008682860101525050818152838301518482015260408301516040820152610375606084016101da565b60608201528095505050505061038e86606087016101ea565b905092959194509250565b600181811c908216806103ad57607f821691505b6020821081036103cd57634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561041d57600081815260208120601f850160051c810160208610156103fa5750805b601f850160051c820191505b8181101561041957828155600101610406565b5050505b505050565b81516001600160401b0381111561043b5761043b61016c565b61044f816104498454610399565b846103d3565b602080601f831160018114610484576000841561046c5750858301515b600019600386901b1c1916600185901b178555610419565b600085815260208120601f198616915b828110156104b357888601518255948401946001909101908401610494565b50858210156104d15787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b61024d806104f06000396000f3fe608060405234801561001057600080fd5b50600436106100c85760003560e01c8063409bb92e116100815780637150d8ae1161005b5780637150d8ae1461018d5780638fca9673146101ad578063c24a0f8b146101cd57600080fd5b8063409bb92e146101725780635ce85a451461017b5780636c8b7efa1461018457600080fd5b8063176fd3f0116100b2578063176fd3f0146100f25780631cc1cf4614610137578063200d2ed21461014057600080fd5b80625b4487146100cd5780630b97bc86146100e9575b600080fd5b6100d660065481565b6040519081526020015b60405180910390f35b6100d660075481565b6001546101129073ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100e0565b6100d6600a5481565b6001546101659074010000000000000000000000000000000000000000900460ff1681565b6040516100e091906101d6565b6100d660095481565b6100d660045481565b6100d660055481565b6003546101129073ffffffffffffffffffffffffffffffffffffffff1681565b6002546101129073ffffffffffffffffffffffffffffffffffffffff1681565b6100d660085481565b6020810160088310610211577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b9190529056fea2646970667358221220c4303d61cd3449eea3d9172da902b317b322a37226456ef27cfa0c402b5cdc8b64736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100c85760003560e01c8063409bb92e116100815780637150d8ae1161005b5780637150d8ae1461018d5780638fca9673146101ad578063c24a0f8b146101cd57600080fd5b8063409bb92e146101725780635ce85a451461017b5780636c8b7efa1461018457600080fd5b8063176fd3f0116100b2578063176fd3f0146100f25780631cc1cf4614610137578063200d2ed21461014057600080fd5b80625b4487146100cd5780630b97bc86146100e9575b600080fd5b6100d660065481565b6040519081526020015b60405180910390f35b6100d660075481565b6001546101129073ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100e0565b6100d6600a5481565b6001546101659074010000000000000000000000000000000000000000900460ff1681565b6040516100e091906101d6565b6100d660095481565b6100d660045481565b6100d660055481565b6003546101129073ffffffffffffffffffffffffffffffffffffffff1681565b6002546101129073ffffffffffffffffffffffffffffffffffffffff1681565b6100d660085481565b6020810160088310610211577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b9190529056fea2646970667358221220c4303d61cd3449eea3d9172da902b317b322a37226456ef27cfa0c402b5cdc8b64736f6c63430008110033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
